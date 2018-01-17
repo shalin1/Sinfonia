@@ -1,0 +1,29 @@
+{
+  "name": "sinfonia",
+  "version": "1.0.0",
+  "description": "___ #### Background This app transforms unassuming button presses in to eruptions of electronic sound, movement, form, and color dancing across the screen.  The aesthetic is destined to be minimal and lo-fi electronic tinged, while also bringing in occasional notes of classical music.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "animejs": "^2.2.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shalin1/Sinfonia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shalin1/Sinfonia/issues"
+  },
+  "homepage": "https://github.com/shalin1/Sinfonia#readme"
+}
