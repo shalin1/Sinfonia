@@ -4,13 +4,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="lib/bundle.js"></script>
+
+    <style>
+      html, body, canvas {
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+
     <title>Sinfonia</title>
   </head>
   <body>
+
+    <audio id="sound">
+      <source src="./media/winxp.mp3">
+    </audio>
+
     <h1>SINFONIA™</h1>
-    <div id="container">
-      <div id="animate">Animate me.</div>
-    </div>
+    <p>Press "V" to trigger sound</p>
+
+    <div id="log"></div>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="lib/bundle.js"></script>
   </body>
 </html>
