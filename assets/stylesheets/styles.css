@@ -9,6 +9,7 @@ section, div {
   align-items: baseline; }
 
 .footer {
+  opacity: 0;
   height: 62px;
   width: 100vw;
   position: absolute;
@@ -32,5 +33,10 @@ section, div {
   font-family: sans-serif;
   margin-bottom: 5px;
   font-size: 12px; }
+
+#main {
+  height: 100vw;
+  width: 100vw;
+  transition: all 2s ease-in; }
 
 /*# sourceMappingURL=styles.css.map */
