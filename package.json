@@ -12,7 +12,9 @@
     "babel-preset-env": "^1.6.1",
     "webpack": "^3.10.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "soundsprite": "^0.2.7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
