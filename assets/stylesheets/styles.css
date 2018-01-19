@@ -8,6 +8,10 @@ section, div {
   flex-direction: row;
   align-items: baseline; }
 
+#content {
+  width: 100vw;
+  height: 100vh; }
+
 .footer {
   opacity: 0;
   height: 62px;
