@@ -37,7 +37,7 @@ The project will be implemented with the following technologies:
 
 * Event listeners in vanilla JS
 
-* Sound playing via HTML5 <audio> element.
+* Sound playback is [Audiosprites](https://github.com/tonistiigi/audiosprite) routed through [Howler](https://howlerjs.com/).
 
 * Sound hosting is MP3's on AWS for faster load times and universal browser compatibility.
 
