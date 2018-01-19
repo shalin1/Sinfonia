@@ -4,6 +4,7 @@
   "description": "___ #### Background This app transforms unassuming button presses in to eruptions of electronic sound, movement, form, and color dancing across the screen.  The aesthetic is destined to be minimal and lo-fi electronic tinged, while also bringing in occasional notes of classical music.",
   "main": "webpack.config.js",
   "dependencies": {
+    "anime": "^0.1.2",
     "animejs": "^2.2.0",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",

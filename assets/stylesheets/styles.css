@@ -39,4 +39,12 @@ section, div {
   width: 100vw;
   transition: all 2s ease-in; }
 
+.box {
+  height: 50vh;
+  width: 70vw;
+  background: red;
+  position: absolute;
+  top: 15vw;
+  left: -70vw; }
+
 /*# sourceMappingURL=styles.css.map */
