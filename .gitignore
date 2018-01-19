@@ -2,5 +2,5 @@
 node_modules/
 bundle.js
 bundle.js.map
-media/sound_raw/
 media/src/
+media/draft
