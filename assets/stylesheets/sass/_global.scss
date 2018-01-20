@@ -1,3 +1,5 @@
+@import 'colors';
+
 html, body, canvas {
   padding: 0px;
   margin: 0px;
@@ -21,4 +23,5 @@ section, div {
   left: 0;
   height: 100vh;
   width: 100vw;
+  background: #A09D87;
 }
