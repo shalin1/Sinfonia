@@ -1,44 +1,15 @@
-<!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8">
+    <title>Circles</title>
     <link rel="stylesheet" href="./assets/stylesheets/styles.css">
-    <title>Sinfonia</title>
-    <!-- Load external PaperScript and associate it with myCanvas -->
-    <script src="https://use.fontawesome.com/62df3dac7b.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-full.js"></script>
-    <script type="text/javascript" src="lib/ooPaper.js"></script>
-    <script src="lib/bundle.js"></script>
+    <script type="text/javascript" src="lib/paper-full.js"></script>
+    <script type="text/javascript" src="lib/bundle.js"></script>
+    <script type="text/paperscript" src="lib/test.js" async=true canvas="canvas">
+
+    </script>
   </head>
   <body>
-
-    <section id="content">
-      <canvas id="canvas" class="canvas" ></canvas>
-
-    </section>
-
-    <section id="footer" class="footer">
-
-
-      <div class="byline">
-        an experience by Shalin Scupham
-      </div>
-
-      <div class="footer-icons">
-        <a href="http://www.google.com/" alt="Portfolio">
-          <i class="fa fa-globe fa-3x" aria-hidden="true"></i>
-        </a>
-
-        <a href="http://www.linkedin.com/in/shalinscupham/" alt="LinkedIn">
-          <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
-        </a>
-
-        <a href="https://github.com/shalin1/" alt="Github">
-          <i class="fa fa-github fa-3x" aria-hidden="true"></i>
-        </a>
-      </div>
-
-    </section>
+    <canvas id="canvas" resize></canvas>
   </body>
 </html>
