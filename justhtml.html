@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Tadpoles</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-full.js"></script>
+	<script type="text/javascript" canvas="canvas">
+	paper.install(window);
+	window.onload = function() {
+		paper.setup('canvas');
+		project.currentStyle = {
+			strokeColor: 'white',
+			strokeWidth: 2,
+			strokeCap: 'round'
+		};
+
+
+		var n = 100,
+			m = 12;
+		var head = new Path.Oval([0, 0], [13, 8]);
+		head.fillColor = 'white';
+		head.strokeColor = null;
+		var headSymbol = new Symbol(head);
+		var Boid = Base.extend({
+			initialize: function(position) {
+				this.vel = Point.random().multiply(2).subtract(1);
+				this.loc = position;
+				this.head = headSymbol.place();
+				this.path = new Path();
+				this.shortPath = new Path();
+				this.shortPath.strokeWidth = 4;
+				for (var i = 0; i < m; i++)
+					this.path.add(this.loc);
+				this.count = 0;
+			},
+			run: function() {
+				var segments = this.path.segments,
+					dx = this.vel.x,
+					dy = this.vel.y,
+					x = this.loc.x += dx,
+					y = this.loc.y += dy,
+					speed = this.vel.length,
+					count = speed * 10,
+					k1 = -5 - speed / 3;
+			    // Bounce off the walls.
+			    if (x < 0 || x > view.size.width) this.vel.x *= -1;
+			    if (y < 0 || y > view.size.height) this.vel.y *= -1;
+
+				for (var i = 0, l = segments.length; i < l; i++) {
+					var point = segments[i].point,
+						vx = x - point.x,
+						vy = y - point.y,
+						k2 = Math.sin(((this.count += count) + i * 3) / 300) / speed;
+					point.x = (x += dx / speed * k1) - dy * k2;
+					point.y = (y += dy / speed * k1) + dx * k2;
+					speed = Math.sqrt((dx = vx) * dx + (dy = vy) * dy);
+				}
+				this.shortPath.segments = segments.slice(0, 3);
+				// TODO: Fix this bug
+				delete this.vel._angle;
+				this.head.matrix = new Matrix().translate(this.loc).rotate(this.vel.angle);
+			}
+		});
+    function onKeyDown(event) {
+      console.log('keypressed');
+    }
+		var boids = [];
+		for (var i = 0; i < n; i++) {
+			boids.push(new Boid(Point.random().multiply(view.size)));
+		}
+		view.onFrame = function(event) {
+			for (var i = 0, l = boids.length; i < l; i++) {
+				boids[i].run();
+			}
+		}
+	}
+
+  const overpass = variation => {
+
+    const w = view.size.width
+    const h = view.size.height
+
+    var sq = new Path.Rectangle(new Point(-w*2, 0), new Size(w*2, h));
+    sq.fillColor = '#F0D2EA';
+    view.onFrame = function(event) {
+      for (var i = 0; i < project.activeLayer.children.length; i++) {
+        let square = project.activeLayer.children[i]
+        square.position.x += (view.size.width/15);
+      }
+    }
+  }
+	</script>
+	<style>
+		body {
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="960" height="500"></canvas>
+</body>
+</html>
