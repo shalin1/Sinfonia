@@ -1,7 +1,8 @@
 html, body, canvas {
   padding: 0px;
   margin: 0px;
-  transition: all 2s; }
+  transition: all 2s;
+  background: #b5b5b5; }
 
 section, div {
   display: flex;
@@ -17,30 +18,40 @@ canvas[resize] {
   height: 100%; }
 
 .footer {
-  opacity: 0;
   height: 62px;
   width: 100vw;
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
   background: #666;
-  color: #f6f6f6;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-bottom: 5px; }
+  color: #B7B7B7;
+  justify-content: space-between;
+  align-items: flex-end; }
 
-.footer div {
-  margin: 0 40px; }
+.credits {
+  padding-right: 50px;
+  padding-bottom: 4px; }
 
 .footer i {
-  margin: 0 20px;
+  margin: 0 10px;
   justify-content: space-between;
-  color: #f6f6f6; }
+  z-index: 100;
+  transform: scale(0.8);
+  color: #B7B7B7; }
 
 .byline {
-  color: #e0e0e0;
-  font-family: sans-serif;
-  margin-bottom: 5px;
-  font-size: 12px; }
+  justify-content: flex-start;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  margin: 5px;
+  padding: 0 8px; }
+
+.logo {
+  font-family: 'Niconne', cursive;
+  font-size: 48px;
+  color: #492225;
+  padding-left: 20px; }
 
 #main {
   height: 100vw;
