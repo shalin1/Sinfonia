@@ -1,7 +1,4 @@
 .DS_Store
 node_modules/
-bundle.js
-bundle.js.map
 media/src/
 media/draft
-paperclipjs-v0.11.5/
