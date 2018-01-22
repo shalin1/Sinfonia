@@ -30,6 +30,9 @@
   z-index: 100;
   transform: scale(0.8);
   color: rgb(181, 181, 181);
+  &:hover {
+    color: rgb(200,200,200);
+  }
 }
 
 .byline {
@@ -45,7 +48,7 @@
   font-family: 'Niconne', cursive;
   font-size: 48px;;
   color: #492225;
-  text-shadow: 2px 2px 7px rgba(181, 181, 181, 0.23);
+  text-shadow: 2px 2px 7px rgba(181, 181, 181, 0.13);
   padding-left: 50px;
 }
 
